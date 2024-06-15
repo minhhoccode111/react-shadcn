@@ -26,6 +26,15 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@p/*": [
+        "./src/pages/*"
+      ],
+      "@c/*": [
+        "./src/components/*"
+      ],
+      "@s/*": [
+        "./src/shared/*"
       ]
     }
   },
