@@ -1,12 +1,6 @@
-/*
- * This store is used to store user's credential
- * after logged in or retrieve localStorage
- */
-
 import { create } from "zustand";
 
-// import { AuthStoreName } from "@/shared/constants";
-const AuthStoreName = "something";
+import { AuthStoreName } from "@/shared/constants";
 
 type StateAuthStore = {
   authData: AuthData;
@@ -17,12 +11,15 @@ type ActionAuthStore = {
 };
 
 type AuthData = {
-  token?: string;
-  isLogin?: boolean;
-  self?: {
-    id: string;
-    fullname: string;
+  user?: {
+    bio: string;
+    email: string;
+    image: string;
+    username: string;
+    isAuthor: boolean;
+    token: string;
   };
+  // add more here
 };
 
 const useAuthStore = create<StateAuthStore & ActionAuthStore>((set) => {

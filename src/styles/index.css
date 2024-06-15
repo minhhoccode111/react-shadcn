@@ -11,6 +11,12 @@
   .text-xxs {
     @apply text-[8px];
   }
+  .pending {
+    @apply opacity-30;
+  }
+  .active {
+    @apply underline;
+  }
 }
 
 @layer components {
@@ -39,4 +45,3 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-

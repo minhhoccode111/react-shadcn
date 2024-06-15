@@ -1,13 +1,12 @@
 import { Navigate } from "react-router-dom";
 import { Fragment } from "react";
 
-import { useAuthStore } from "@s/stores";
+import { useAuthStore } from "@/shared/stores";
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const authData = useAuthStore((state) => state.authData);
 
-  // any of these in valid will be a logout
-  if (!authData.isLogin || !authData.token || !authData.self) {
+  if (!authData.user?.username || !authData.user?.token) {
     return <Navigate to="/logout" replace={true} />;
   }
 

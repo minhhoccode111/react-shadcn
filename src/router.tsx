@@ -1,15 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import NotFound from "@p/not-found";
-import SiteLayout from "@p/site-layout";
-import SiteIndex from "@p/site-index";
-import About from "@p/about";
-import Login from "@p/login";
-import Signup from "@p/signup";
+import NotFound from "@/pages/not-found";
+import SiteLayout from "@/pages/site-layout";
+import SiteIndex from "@/pages/site-index";
+import About from "@/pages/about";
+import Login from "@/pages/login";
+import Signup from "@/pages/signup";
 
-import { loader as logoutLoader } from "@p/logout";
+import { loader as logoutLoader } from "@/pages/logout";
 
-import AuthWrapper from "@c/auth-wrapper";
-import Dummy from "@p/dummy";
+import AuthWrapper from "@/components/auth-wrapper";
+import Dummy from "@/pages/dummy";
 
 export default function Router() {
   const router = createBrowserRouter([
